@@ -6,7 +6,7 @@ const { render } = require('ejs');
 const { setTimeout } = require('timers');
 
 const app = express();
-app.use('/scripts', express.static(path.join(__dirname, 'scripts')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
